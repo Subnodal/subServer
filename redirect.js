@@ -4,6 +4,6 @@ function getURLParameter(name) {
 
 $(function() {
     firebase.database().ref("users/" + getURLParameter("user") + "/public/products/subServer/projects/" + getURLParameter("project") + "/redirect").once("value", function(snapshot) {
-       window.location.href = snapshot.val();
+        window.location.href = snapshot.val();
     });
 });
